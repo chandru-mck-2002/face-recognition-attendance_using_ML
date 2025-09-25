@@ -24,13 +24,13 @@ The **Face Recognition Attendance System** simplifies attendance management usin
 ---
 ## user_interface:
 ### Home Page
-![Home Page](assets/home_page.png)
+![Home Page](assets/home.png)
 
 ### Attendance Page
-![Attendance Page](assets/attendance_page.png)
+![Attendance Page](assets/making.png)
 
 ### Add User Page
-![Add User](assets/add_user_page.png)
+![Add User](assets/new_user.png)
 ---
 ## Folder Structure
 face-recognition-attendance-system/
