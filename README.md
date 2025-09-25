@@ -23,19 +23,19 @@ The **Face Recognition Attendance System** simplifies attendance management usin
 
 ---
 ## Folder Structure
-`face-recognition-attendance-system/
-│
-├── app.py # Main Flask application
-├── requirements.txt # Python dependencies
-├── static/
-│ └── faces/ # User images folders (username_id)
-├── Attendance/ # CSV attendance files
-├── templates/
-│ ├── home.html
-│ ├── attendance.html
-│ └── add_user.html
-├── haarcascade_frontalface_default.xml
-└── README.md`
+         ```face-recognition-attendance-system/
+         │
+         ├── app.py # Main Flask application
+         ├── requirements.txt # Python dependencies
+         ├── static/
+         │ └── faces/ # User images folders (username_id)
+         ├── Attendance/ # CSV attendance files
+         ├── templates/
+         │ ├── home.html
+         │ ├── attendance.html
+         │ └── add_user.html
+         ├── haarcascade_frontalface_default.xml
+         └── README.md```
 
 ---
 
