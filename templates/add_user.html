@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New User</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Floating background particles */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2016/10/20/18/35/abstract-1759194_1280.png') repeat;
+      opacity: 0.05;
+      z-index: 0;
+      animation: floatBG 30s linear infinite;
+    }
+
+    @keyframes floatBG {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    /* Card container */
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 400px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: floatCard 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatCard {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #333;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+      outline: none;
+      border-color: #00d4ff;
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    }
+
+    button[type="submit"] {
+      padding: 12px;
+      background: linear-gradient(45deg, #007bff, #00d4ff);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.5);
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 25px;
+      background: #28a745;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Add New User</h1>
+    <form action="/add" method="POST" enctype="multipart/form-data">
+      <label for="newusername">Enter New User Name*</label>
+      <input type="text" id="newusername" name="newusername" required>
+
+      <label for="newuserid">Enter New User ID*</label>
+      <input type="number" id="newuserid" name="newuserid" required>
+
+      <button type="submit">Add New User</button>
+    </form>
+    <div class="info">
+      <p>Total Users in Database: {{totalreg}}</p>
+    </div>
+    <a href="/" class="home-btn">Home</a>
+  </div>
+
+</body>
+</html>
