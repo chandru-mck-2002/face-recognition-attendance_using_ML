@@ -22,7 +22,16 @@ The **Face Recognition Attendance System** simplifies attendance management usin
 - **ML Model Storage:** `face_recognition_model.pkl` via `joblib`.
 
 ---
+## user_interface:
+### Home Page
+![Home Page](assets/home_page.png)
 
+### Attendance Page
+![Attendance Page](assets/attendance_page.png)
+
+### Add User Page
+![Add User](assets/add_user_page.png)
+---
 ## Folder Structure
 face-recognition-attendance-system/
 │
